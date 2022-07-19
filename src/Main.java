@@ -10,6 +10,10 @@ public class Main {
         Human Eren=new Human("Eren","Alakbarov",2029,Lala,Samin);
         String sl[][]={{"Monday","Tuesday","Wednesday","Thursday","Friday"},{"Playing piano","Doing math","Yoga","Reading book","Watching AOT"}};
         byte iq=100;
+        System.out.println(carrot);
+        carrot.eat();
+        carrot.foul();
+        carrot.respond();
         Human Mikasa=new Human("Mikasa","Alakbarova",2031,iq,cat,Lala,Samin,sl);
         Human nobody=new Human();
         Mikasa.greetPet();
