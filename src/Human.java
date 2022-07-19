@@ -19,33 +19,37 @@ public class Human {
             System.out.println("almost non sly");
         }
         }
+  @Override
     public String toString(){
-        return String.format("Human{name=$s, surname=%s, year=%d, iq=%d, mother=%s, father=$s, %s}",
-                this.name, this.surname, this.year, this.iq, this.mother.name + " " + this.mother.surname, this.father.name + " " + this.father.surname, this.pet.toString());
+        return "Human{name='" + this.name + "', surname='" + this.surname + "', year=" + this.year + ", iq=" + this.iq + ", mother='" + (this.mother != null ? this.mother.name + " " + this.mother.surname : "null") + "', father='" + (this.father != null ? this.father.name + " " + this.father.surname : "null") +"', pet=" + this.pet + "}";
     }
 
-
-    Human(String name, String surname, int year, Human mother, Human father) {
-        this.name = name;
-        this.surname = surname;
-        this.year = year;
-        this.mother = mother;
-        this.father = father;
-    }
-
-    Human(String name, String surname, int year, byte iq, Pet pet, Human mother, Human father, String schedule[][]) {
-        this.name = name;
-        this.surname = surname;
-        this.year = year;
-        this.iq = iq;
-        this.pet = pet;
-        this.mother = mother;
-        this.father = father;
-        this.schedule = schedule;
-    }
 
     Human() {
 
+    }
+    Human(String nm, String snm, int yr) {
+        this.name = nm;
+        this.surname = snm;
+        this.year = yr;
+    }
+    Human(String nm, String snm, int yr, Human mr, Human fr) {
+        this.name = nm;
+        this.surname = snm;
+        this.year = yr;
+        this.mother = mr;
+        this.father = fr;
+    }
+
+    Human(String nm, String snm, int yr, byte iq, Pet pet, Human mr, Human fr, String sdle[][]) {
+        this.name = nm;
+        this.surname = snm;
+        this.year = yr;
+        this.mother = mr;
+        this.father = fr;
+        this.iq=iq;
+        this.pet=pet;
+        this.schedule=sdle;
     }
 
 }
