@@ -13,9 +13,10 @@ public class Pet {
     public void foul(){
         System.out.println("I need to cover it up.");
     }
+   
+    @Override
     public String toString() {
-        return String.format("%s{nickname=%s, age=5, trickLevel=%d, habits=%s}",
-                this.species, this.nickname, this.trickLevel, this.habits);
+        return this.species + "{nickname='" + this.nickname + "', age=" + this.age + ", trickLevel=" + this.trickLevel + ", habits=" + Arrays.toString(this.habits) + "}";
     }
     Pet(){
     }
